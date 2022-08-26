@@ -13,33 +13,35 @@
         <div class="peopleIcon"><img src="./images/people 1.png" alt="people icon"></div>
     </header>
     <div class="content">
-        <div class="div-msg entrou">
+        <!-- <div class="div-msg entrou">
             <div class="hora"><p>(09:21:45)</p></div>
             <div class="descricao"><p><span>João</span> entra na sala...</p></div>
             <div class="msg"></div>
         </div>
-        <div class="div-msg entrou">
+        <div class="div-msg saiu">
             <div class="hora"><p>(09:21:45)</p></div>
-            <div class="descricao"><p><span>João</span> entra na sala...</p></div>
+            <div class="descricao"><p><span>João</span> sai da sala...</p></div>
             <div class="msg"></div>
+        </div> -->
+        <div class="div-msg publica">
+            <div class="hora"><p>(09:21:45)</p></div>
+            <div class="descricao"><p><span>João</span> para <span>Maria</span>:</p></div>
+            <div class="msg">Oii, quer tc ?</div>
         </div>
-        <div class="div-msg entrou">
+        <div class="div-msg reservada">
             <div class="hora"><p>(09:21:45)</p></div>
-            <div class="descricao"><p><span>João</span> entra na sala...</p></div>
-            <div class="msg"></div>
-        </div>
-        <div class="div-msg entrou">
-            <div class="hora"><p>(09:21:45)</p></div>
-            <div class="descricao"><p><span>João</span> entra na sala...</p></div>
-            <div class="msg"></div>
+            <div class="descricao"><p><span>João</span> reservadamente para <span>Maria</span>:</p></div>
+            <div class="msg">Oii, quer tc ?</div>
         </div>
     </div>
     <footer>
-        <input type="text" placeholder="Escreva aqui...">
-        <ion-icon name="paper-plane-outline"></ion-icon>
+        <input class="caixa-texto" type="text" placeholder="Escreva aqui...">
+        <div class="button-enviar" onclick="enviarMensagem()"><ion-icon name="paper-plane-outline"></ion-icon></div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+    
   </body>
 </html>

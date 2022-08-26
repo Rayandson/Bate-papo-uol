@@ -30,7 +30,7 @@ header {
 
 .content {
     width:100%;
-    height:calc(100vh - 80px*2);
+    min-height:calc(100vh - 80px*2);
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -51,11 +51,20 @@ header {
     align-items: center;
     box-sizing:content-box;
 }
- .entrou {
+ .status {
     background: #DCDCDC;
  }
 
+.publica {
+    background-color: #FFFFFF;
+}
+.msg {
+    margin-left: 5px;
+}
 
+.reservada {
+    background-color: #FFDEDE;
+}
 span {
     font-weight: bold;
 }
@@ -101,10 +110,21 @@ input::placeholder {
 footer ion-icon {
     font-size: 26px;
 }
-
+.button-enviar {
+    width:34px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
 @media (min-width: 600px) {
     footer ion-icon {
         font-size: 26px;
-        margin-right: 3%;
     } 
-}
+     .button-enviar {
+        margin-right: 2%;
+    } 
+    footer input {
+        width: 92%;
+    }
+} 
