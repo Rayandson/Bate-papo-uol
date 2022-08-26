@@ -70,12 +70,12 @@ function enviarMensagem(){
     if(username === null){
         username = "Anônimo";
     }
-    // if(texto.value !== ""){
+    if(texto.value !== ""){
     let mensagem = {from:`${username}`, to:"Todos", text:`${texto.value}`,type:"message"}
     const requisicao = axios.post("https://mock-api.driven.com.br/api/v6/uol/messages",mensagem);
     requisicao.then(buscarMensagens);
     requisicao.catch(Recarregar);
-// }
+}
     texto.value = "";
 }
 
