@@ -73,7 +73,11 @@ function buscarParticipantes(){
 }
 
 function renderizarParticipantes(resposta){
-    // console.log("Lista recebida");
+    let participantsDiv = document.querySelector(".ul-1");
+    participantsDiv.innerHTML = `<li><div class="li-div"><img src="./images/people 2.png" alt=""><p>Todos (${resposta.data.length})</p><img class="check-icon selecionado" src="./images/check.png">`;
+    for(let i = 0; i < resposta.data.length; i++) {
+        participantsDiv.innerHTML +=  `</li><li><div class="li-div"><img src="./images/person-circle 2.png" alt=""><p>${resposta.data[i].name}</p><img class="check-icon" src="./images/check.png"></li>`
+    }
 }
 
 
@@ -100,3 +104,10 @@ function mostraSidebar() {
     sidebar.classList.remove("escondido");
     console.log(sidebar.classList);
 }
+
+// const newDiv = document.querySelector(".sidebar")
+// document.addEventListener('click', (e) => {
+//     if(!e.target.closest('[data-menu]')) {
+//       newDiv.classList.toggle('escondido');
+//     }
+// })
