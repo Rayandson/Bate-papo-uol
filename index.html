@@ -8,9 +8,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="login">
+        <img src="./images/logo 2.png" alt="logo">
+        <div class="inserirDados">
+            <input class="username" type="text" placeholder="Digite seu nome">
+            <button class="entrar" onclick="verificaNome()">Entrar</button>
+        </div>
+    </div>
+    <div class="carregando escondido">
+        <div class="entrando">
+            <img src="./images/logo 2.png" alt="">
+            <p class="entrando-texto">Aguarde...</p></div>
+    </div>
+    <div class="sidebar escondido">
+        <div class="menu">
+            <div class="div-h1"><h1>Escolha um contato para enviar mensagem:</h1></div>
+            <ul class="ul-1">
+                <li><div class="li-div"><img src="./images/people 2.png" alt=""><p>Todos</p><ion-icon name="checkmark-outline"></ion-icon></div></li>
+                <li><div class="li-div"><img src="./images/person-circle 2.png" alt=""><p>João</p><ion-icon name="checkmark-outline"></ion-icon></div></li>
+                <li><div class="li-div"><img src="./images/person-circle 2.png" alt=""><p>Maria</p><ion-icon name="checkmark-outline"></ion-icon></div></li>
+            </ul>
+            <h2>Escolha a visibilidade:</h2>
+            <ul>
+                <li><div class="li-div"><img src="./images/lock-open 1.png" alt=""><p>Público</p><ion-icon name="checkmark-outline"></ion-icon></div></li>
+                <li><div class="li-div"><img src="./images/lock-closed 1.png" alt=""><p>Reservadamente</p><ion-icon name="checkmark-outline"></ion-icon></div></li>
+            </ul>
+
+        </div>
+    </div>
     <header>
-        <div class="logo"><img src="./images/logo 2.png" alt="logo uol"></div>
-        <div class="peopleIcon"><img src="./images/people 1.png" alt="people icon"></div>
+        <div class="logo" ><img src="./images/logo 2.png" alt="logo uol"></div>
+        <div class="peopleIcon" onclick="mostraSidebar()"><img src="./images/people 1.png" alt="people icon"></div>
     </header>
     <div class="content">
         <!-- <div class="div-msg entrou">
@@ -23,7 +51,7 @@
             <div class="descricao"><p><span>João</span> sai da sala...</p></div>
             <div class="msg"></div>
         </div> -->
-        <div class="div-msg publica">
+        <!-- <div class="div-msg publica">
             <div class="hora"><p>(09:21:45)</p></div>
             <div class="descricao"><p><span>João</span> para <span>Maria</span>:</p></div>
             <div class="msg">Oii, quer tc ?</div>
@@ -32,11 +60,11 @@
             <div class="hora"><p>(09:21:45)</p></div>
             <div class="descricao"><p><span>João</span> reservadamente para <span>Maria</span>:</p></div>
             <div class="msg">Oii, quer tc ?</div>
-        </div>
+        </div> -->
     </div>
     <footer>
         <input class="caixa-texto" type="text" placeholder="Escreva aqui...">
-        <div class="button-enviar" onclick="enviarMensagem()"><ion-icon name="paper-plane-outline"></ion-icon></div>
+        <div class="button-enviar" onclick="enviarMensagem()" ><ion-icon name="paper-plane-outline"></ion-icon></div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
