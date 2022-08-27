@@ -20,8 +20,8 @@
             <img src="./images/logo 2.png" alt="">
             <p class="entrando-texto">Aguarde...</p></div>
     </div>
-    <div class="sidebar escondido">
-        <div class="menu data-menu">
+    <div class="sidebar">
+        <div class="menu" data-menu>
             <div class="div-h1"><h1>Escolha um contato para enviar mensagem:</h1></div>
             <ul class="ul-1">
                 <!-- <li><div class="li-div"><img src="./images/people 2.png" alt=""><p>Todos</p><ion-icon name="checkmark-outline"></ion-icon></div></li> -->
@@ -33,12 +33,13 @@
                 <li><div class="li-div"><img src="./images/lock-open 1.png" alt=""><p>Público</p><img class="check-icon selecionado" src="./images/check.png">
                 <li><div class="li-div"><img src="./images/lock-closed 1.png" alt=""><p>Reservadamente</p><img class="check-icon" src="./images/check.png">
             </ul>
-
+            <button class="voltar" onclick="esconderSidebar()"><ion-icon name="return-down-back"></ion-icon></button>
         </div>
     </div>
     <header>
         <div class="logo" ><img src="./images/logo 2.png" alt="logo uol"></div>
-        <div class="peopleIcon" onclick="mostraSidebar()"><img src="./images/people 1.png" alt="people icon"></div>
+        <div id ="peopleIcon" onclick="mostraSidebar()"><img src="./images/people 1.png" alt="people icon"></div>
+     
     </header>
     <div class="content">
         <!-- <div class="div-msg entrou">
@@ -63,7 +64,7 @@
         </div> -->
     </div>
     <footer>
-        <input class="caixa-texto" type="text" placeholder="Escreva aqui...">
+        <input id="caixa-texto" type="text" placeholder="Escreva aqui...">
         <div class="button-enviar" onclick="enviarMensagem()" ><ion-icon name="paper-plane-outline"></ion-icon></div>
     </footer>
 

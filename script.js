@@ -82,7 +82,7 @@ function renderizarParticipantes(resposta){
 
 
 function enviarMensagem(){
-    let texto = document.querySelector(".caixa-texto");
+    let texto = document.querySelector("#caixa-texto");
     if(username === null){
         username = "Anônimo";
     }
@@ -101,13 +101,27 @@ function Recarregar() {
 
 function mostraSidebar() {
     let sidebar = document.querySelector(".sidebar");
-    sidebar.classList.remove("escondido");
-    console.log(sidebar.classList);
+    sidebar.style.display = "initial";
+    console.log("Foi");
 }
 
-// const newDiv = document.querySelector(".sidebar")
-// document.addEventListener('click', (e) => {
-//     if(!e.target.closest('[data-menu]')) {
-//       newDiv.classList.toggle('escondido');
-//     }
-// })
+function esconderSidebar() {
+    let sidebar = document.querySelector(".sidebar");
+    sidebar.style.display = "none";
+    console.log("Escondeu");
+}
+
+const newDiv = document.querySelector(".sidebar")
+document.addEventListener('click', (e) => {
+    if(e.target.id !== 'peopleIcon' && !e.target.closest('[data-menu]')) {
+      newDiv.style.display = "none";
+    }
+})
+
+const inputElement = document.querySelector('#caixa-texto');
+inputElement.addEventListener('keyup', function(e){
+  let key = e.which || e.keyCode;
+  if (key == 13) { 
+    enviarMensagem();
+  }
+}); 

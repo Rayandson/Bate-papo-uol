@@ -35,7 +35,6 @@
     background: #FFFFFF;
     border: 1px solid #D7D7D7;
     border-radius: 4px;
-    /* text-align: center; */
     font-family:'Roboto';
     font-size: 16px;
     padding-left: 10px;
@@ -116,10 +115,13 @@
 .escondido {
     display: none;
 }
-
+.active {
+    display: initial;
+}
 .sidebar{
     width: 100%;
     height: 100%;
+    display: none;
     background-color: rgba(68, 65, 65, 0.7);
     position:fixed;
     bottom:0;
@@ -162,6 +164,10 @@
     margin: 10px 0;
     position: relative;
 }
+
+.li-div:hover{ 
+    cursor: pointer;
+}
 .li-div img {
     margin-right: 5px;
 }
@@ -176,19 +182,38 @@
 }
 .ul-1 {
     margin-bottom: 25px;
-    height: 250px;
+    height: 232px;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-.ul-1::-webkit-scrollbar {
+/* .ul-1::-webkit-scrollbar {
     background-color: #e5e5e5;
-    /* height: 6px; */
-    width: 6px;
+    width: 4px;
 }
 
 .ul-1::-webkit-scrollbar-thumb {
     background-color: #bdb8b8;
     border-radius: 5px;
+} */
+
+.voltar {
+    width: 60px;
+    background-color: #F75245;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 50px;
+    left: Calc(50% - 30px);
+}
+
+.voltar ion-icon {
+    font-size: 22px;
+    color:white;
+}
+
+.voltar:hover {
+    cursor: pointer;
 }
 
 header {
@@ -210,9 +235,14 @@ header {
     height: 53px;
 }
 
-.peopleIcon img {
+#peopleIcon:hover {
+    cursor: pointer;
+}
+
+#peopleIcon img {
     width:45px;
     height: 45px;
+    pointer-events: none;
 }
 
 .content {
@@ -325,5 +355,16 @@ footer ion-icon {
     .login img {
         position: absolute;
         top:12vh;
+    }
+    .ul-1 {
+        height: 250px;
+    }
+    .ul-1::-webkit-scrollbar {
+        background-color: #e5e5e5;
+        width: 6px;
+    }
+    .ul-1::-webkit-scrollbar-thumb {
+        background-color: #bdb8b8;
+        border-radius: 5px;
     }
 } 
