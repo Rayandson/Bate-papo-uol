@@ -202,15 +202,15 @@
   overflow-x: hidden;
 }
 
-/* .ul-1::-webkit-scrollbar {
-    background-color: #e5e5e5;
-    width: 4px;
+.ul-1 li {
+  position: relative;
 }
 
-.ul-1::-webkit-scrollbar-thumb {
-    background-color: #bdb8b8;
-    border-radius: 5px;
-} */
+.numParticipantes {
+  position: absolute;
+  left: 74px;
+  top: 5px;
+}
 
 .voltar {
   width: 60px;

@@ -103,10 +103,15 @@ function buscarParticipantes() {
 let comparador;
 function renderizarParticipantes(resposta) {
   let participantsDiv = document.querySelector(".ul-1");
-  participantsDiv.innerHTML = `<li><div class="li-div all" onclick="selecionarDestino(this)"><img src="./images/people 2.png" alt=""><p>Todos (${resposta.data.length})</p><img class="check-icon" src="./images/check.png"></div>`;
+  // ${resposta.data.length} numero de participantes
+  if(ultimoSelecionado.innerHTML == `<img src="./images/people 2.png" alt=""><p>Todos</p><img class="check-icon selecionado" src="./images/check.png">`){
+    participantsDiv.innerHTML = `<li><div class="li-div all" onclick="selecionarDestino(this)"><img src="./images/people 2.png" alt=""><p>Todos</p><img class="check-icon selecionado" src="./images/check.png"></div><div class="numParticipantes">(${resposta.data.length})</div></li>`; 
+  }else {
+  participantsDiv.innerHTML = `<li><div class="li-div all" onclick="selecionarDestino(this)"><img src="./images/people 2.png" alt=""><p>Todos</p><img class="check-icon" src="./images/check.png"></div><div class="numParticipantes">(${resposta.data.length})</div></li>`;
+  }
   for (let i = 0; i < resposta.data.length; i++) {
     comparador = `<img src="./images/person-circle 2.png" alt=""><p>${resposta.data[i].name}</p><img class="check-icon selecionado" src="./images/check.png">`;
-    // Se ultimo = <img...<p>Todos (${resposta.data.length})
+    
     if (comparador == ultimoSelecionado.innerHTML) {
       participantsDiv.innerHTML += `<li><div class="li-div" onclick="selecionarDestino(this)"><img src="./images/person-circle 2.png" alt=""><p>${resposta.data[i].name}</p><img class="check-icon selecionado" src="./images/check.png"></div></li>`;
       destino = `${resposta.data[i].name}`;
@@ -135,11 +140,12 @@ function selecionarDestino(div) {
   let nome = div.querySelector("p");
   let rodape = document.querySelector(".rodape");
   destino = nome.innerHTML;
-  if (div.classList.contains("all")) {
-    rodape.innerHTML = `Enviando para Todos (${visibility})`;
-  } else {
-    rodape.innerHTML = `Enviando para ${destino} (${visibility})`;
-  }
+  rodape.innerHTML = `Enviando para ${destino} (${visibility})`;
+  // if (div.classList.contains("all")) {
+  //   rodape.innerHTML = `Enviando para Todos (${visibility})`;
+  // } else {
+  //   rodape.innerHTML = `Enviando para ${destino} (${visibility})`;
+  // }
 }
 
 let ultimoSelecionado = "";
@@ -161,13 +167,13 @@ function escolherVisibilidade(div) {
     rodape.innerHTML = `Enviando para ${destino} (${visibility})`;
   }
 }
-let visibility = "Público";
+let visibility = "";
 let mensagem = "";
 
 function enviarMensagem() {
   let texto = document.querySelector("#caixa-texto");
   if (texto.value !== "") {
-    if (visibility === "Público") {
+    if (visibility === "Pública") {
       mensagem = {
         from: `${username}`,
         to: "Todos",
