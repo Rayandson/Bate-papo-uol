@@ -2,7 +2,7 @@ let username = "";
 let nome;
 function verificaNome() {
   username = document.querySelector(".username").value;
-  if(username !== "") {
+  // if(username !== "") {
   let aguarde = document.querySelector(".carregando");
   aguarde.classList.remove("escondido");
   nome = { name: `${username}` };
@@ -15,7 +15,7 @@ function verificaNome() {
   });
   requisicao.catch(processaErro);
 }
-}
+// }
 function processaErro(erro) {
   if (erro.response.status !== 200) {
     alert("O nome já existe! Escolha outro.");
@@ -130,7 +130,7 @@ function firstCheck(){
     ultimoSelecionado = primeiro;
 }
 
-let destino = "";
+let destino = "Todos";
 function selecionarDestino(div) {
   let divCheck = div.querySelector(".check-icon");
   let selecionado = document.querySelector(".ul-1 .selecionado");
@@ -164,7 +164,7 @@ function escolherVisibilidade(div) {
     rodape.innerHTML = `Enviando para ${destino} (${visibility})`;
   }
 }
-let visibility = "";
+let visibility = "Pública";
 let mensagem = "";
 
 function enviarMensagem() {
@@ -173,7 +173,7 @@ function enviarMensagem() {
     if (visibility === "Pública") {
       mensagem = {
         from: `${username}`,
-        to: "Todos",
+        to: `${destino}`,
         text: `${texto.value}`,
         type: "message",
       };
