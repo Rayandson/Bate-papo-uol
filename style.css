@@ -1,190 +1,205 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .login {
-    width: 100%;
-    height: 100%;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 .login img {
-    position: absolute;
-    top:75px;
+  position: absolute;
+  top: 75px;
 }
 
 .inserirDados {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
 .inserirDados input {
-    width: 261px;
-    height: 54px;
-    background: #FFFFFF;
-    border: 1px solid #D7D7D7;
-    border-radius: 4px;
-    font-family:'Roboto';
-    font-size: 16px;
-    padding-left: 10px;
+  width: 261px;
+  height: 54px;
+  background: #ffffff;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  font-family: "Roboto";
+  font-size: 16px;
+  padding-left: 10px;
 }
 
 .inserirDados input:focus {
-    text-align: initial;
-    outline: none;
+  text-align: initial;
+  outline: none;
 }
 
 .inserirDados button {
-    width:109px;
-    height: 45px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    color: #696969;
-    background: #E7E7E7;
-    border-radius: 9px;
-    border: none;
-
+  width: 109px;
+  height: 45px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #696969;
+  background: #e7e7e7;
+  border-radius: 9px;
+  border: none;
 }
 .inserirDados button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .inserirDados input::placeholder {
-    font-style: normal;
-    color: #D7D7D7;
-    text-align: center;
+  font-style: normal;
+  color: #d7d7d7;
+  text-align: center;
 }
 
 .carregando {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255,255,255,0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 .entrando {
-    width: 200px;
-    height: 200px;
-    background-color: #FEB621;
-    border-radius: 10px;
-    color:#D52322;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    position: relative;
-    /* position: fixed;
+  width: 200px;
+  height: 200px;
+  background-color: #feb621;
+  border-radius: 10px;
+  color: #d52322;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  /* position: fixed;
     opacity: 1;
     z-index: 4; */
 }
 
-.entrando img {
-    width: 85px;
-    position: absolute;
-    top: 20px;
+.img-logo {
+  width: 85px;
+  position: absolute;
+  top: 20px;
 }
-.entrando p{
-    margin-left: 25px;
-    margin-top: 30px;
+.entrando p {
+  margin-left: 25px;
+  margin-top: 30px;
+}
+
+.aguarde {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.spin {
+  width: 40px;
 }
 
 .escondido {
-    display: none;
+  display: none;
 }
 .active {
-    display: initial;
+  display: initial;
 }
-.sidebar{
-    width: 100%;
-    height: 100%;
-    display: none;
-    background-color: rgba(68, 65, 65, 0.7);
-    position:fixed;
-    bottom:0;
-    left:0;
-    z-index: 3;
+.sidebar {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(68, 65, 65, 0.7);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
 }
 
 .menu {
-    width: 259px;
-    height: 100%;
-    background-color: #FFFFFF;
-    padding-left:17px;
-    padding-right: 8px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: 4;
+  width: 259px;
+  height: 100%;
+  background-color: #ffffff;
+  padding-left: 17px;
+  padding-right: 8px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
 }
-.menu h1, .menu h2 {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    text-align: center;
-    color: #000000;
+.menu h1,
+.menu h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: #000000;
 }
-.div-h1{
- width: 170px;
- height: 84px;
- display: flex;
- justify-content: center;
- align-items: center;
- margin: 0 auto;
+.div-h1 {
+  width: 170px;
+  height: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 .li-div {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  position: relative;
 }
 
-.li-div:hover{ 
-    cursor: pointer;
+.li-div:hover {
+  cursor: pointer;
 }
 .li-div img {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 .check-icon {
-    position: absolute;
-    bottom: 3px;
-    left: 200px;
-    opacity: 0;
+  position: absolute;
+  bottom: 3px;
+  left: 200px;
+  opacity: 0;
 }
 .selecionado {
-    opacity: 1;
+  opacity: 1;
 }
 .ul-1 {
-    margin-bottom: 25px;
-    height: 232px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+  margin-bottom: 25px;
+  height: 232px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /* .ul-1::-webkit-scrollbar {
@@ -198,173 +213,183 @@
 } */
 
 .voltar {
-    width: 60px;
-    background-color: #F75245;
-    border: none;
-    border-radius: 10px;
-    position: absolute;
-    bottom: 50px;
-    left: Calc(50% - 30px);
+  width: 60px;
+  background-color: #f75245;
+  border: none;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 50px;
+  left: Calc(50% - 30px);
 }
 
 .voltar ion-icon {
-    font-size: 22px;
-    color:white;
+  font-size: 22px;
+  color: white;
 }
 
 .voltar:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 header {
-    width:100%;
-    height: 80px;
-    background-color: #FFFFFF;
-    /* background-color: blue; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-    position: fixed;
-    top: 0;
-    left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  /* background-color: blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .logo img {
-    width: 75px;
-    height: 53px;
+  width: 75px;
+  height: 53px;
 }
 
 #peopleIcon:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #peopleIcon img {
-    width:45px;
-    height: 45px;
-    pointer-events: none;
+  width: 45px;
+  height: 45px;
+  pointer-events: none;
 }
 
 .content {
-    width:100%;
-    min-height:calc(100vh - 80px*2);
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    background-color: green;
-    margin:80px 0;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    background-color: #E5E5E5;
-    padding: 0 3px;
+  width: 100%;
+  min-height: calc(100vh - 80px * 2);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: green;
+  margin: 80px 0;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: #e5e5e5;
+  padding: 0 3px;
 }
 
 .descricao p {
-    width: 78vw;
+  width: 78vw;
 }
 
 .div-msg {
-    width: 100%;
-    min-height: 40px;
-    display: flex;
-    align-items: center;
-    word-wrap: break-word;
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
 }
- .status {
-    background: #DCDCDC;
- }
+.status {
+  background: #dcdcdc;
+}
 
 .publica {
-    background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .msg {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .reservada {
-    background-color: #FFDEDE;
+  background-color: #ffdede;
 }
 .user {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .hora {
-    margin:0 5px;
-    color: #AAAAAA;
+  margin: 0 5px;
+  color: #aaaaaa;
 }
 
 footer {
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 17px;
-    position:fixed;
-    bottom: 0;
-    left: 0;
-    background-color: #FFFFFF;
-    /* background-color: yellow; */
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 17px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  /* background-color: yellow; */
 }
 
 footer input {
-    width: 88%;
-    height: 45px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    border: none;
-    outline: none;
-    padding-left: 10px;
+  width: 88%;
+  height: 45px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
 }
 
 input::placeholder {
-    font-family: 'Roboto';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 18px;
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
 }
 
 footer ion-icon {
-    font-size: 26px;
+  font-size: 26px;
 }
 .button-enviar {
-    width:34px;
-    margin-right: 5px;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
+  width: 34px;
+  margin-right: 5px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rodape {
+  font-family: "Roboto";
+  font-size: 14px;
+  position: absolute;
+  bottom: 8px;
+  left: 27px;
+  color: #505050;
 }
 @media (min-width: 600px) {
-    footer ion-icon {
-        font-size: 26px;
-    } 
-     .button-enviar {
-        margin-right: 2%;
-    } 
-    footer input {
-        width: 92%;
-    }
-    .entrando {
-        width: 350px;
-        height: 200px;
-    }
-    .login img {
-        position: absolute;
-        top:12vh;
-    }
-    .ul-1 {
-        height: 250px;
-    }
-    .ul-1::-webkit-scrollbar {
-        background-color: #e5e5e5;
-        width: 6px;
-    }
-    .ul-1::-webkit-scrollbar-thumb {
-        background-color: #bdb8b8;
-        border-radius: 5px;
-    }
-} 
+  footer ion-icon {
+    font-size: 26px;
+  }
+  .button-enviar {
+    margin-right: 2%;
+  }
+  footer input {
+    width: 92%;
+  }
+  .entrando {
+    width: 350px;
+    height: 200px;
+  }
+  .login img {
+    position: absolute;
+    top: 12vh;
+  }
+  .ul-1 {
+    height: 250px;
+  }
+  .ul-1::-webkit-scrollbar {
+    background-color: #e5e5e5;
+    width: 6px;
+  }
+  .ul-1::-webkit-scrollbar-thumb {
+    background-color: #bdb8b8;
+    border-radius: 5px;
+  }
+}

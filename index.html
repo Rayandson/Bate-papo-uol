@@ -17,21 +17,25 @@
     </div>
     <div class="carregando escondido">
         <div class="entrando">
-            <img src="./images/logo 2.png" alt="">
-            <p class="entrando-texto">Aguarde...</p></div>
+            <img class="img-logo" src="./images/logo 2.png" alt="">
+            <div class="aguarde">
+                <p class="entrando-texto">Aguarde...</p>
+                <img class="spin" src="./images/Spin-1s-200px.gif" alt="">
+            </div>
+        </div>
     </div>
     <div class="sidebar">
         <div class="menu" data-menu>
             <div class="div-h1"><h1>Escolha um contato para enviar mensagem:</h1></div>
             <ul class="ul-1">
-                <!-- <li><div class="li-div"><img src="./images/people 2.png" alt=""><p>Todos</p><ion-icon name="checkmark-outline"></ion-icon></div></li> -->
+                <!-- <li><div class="li-div all"><img src="./images/people 2.png" alt=""><p>Todos</p><ion-icon name="checkmark-outline"></ion-icon></div></li> -->
                 <!-- <li><div class="li-div"><img src="./images/person-circle 2.png" alt=""><p>João</p><ion-icon name="checkmark-outline"></ion-icon></div></li>
                 <li><div class="li-div"><img src="./images/person-circle 2.png" alt=""><p>Maria</p><ion-icon name="checkmark-outline"></ion-icon></div></li> -->
             </ul>
             <h2>Escolha a visibilidade:</h2>
             <ul class="ul-2">
-                <li><div class="li-div"><img src="./images/lock-open 1.png" alt=""><p>Público</p><img class="check-icon selecionado" src="./images/check.png">
-                <li><div class="li-div"><img src="./images/lock-closed 1.png" alt=""><p>Reservadamente</p><img class="check-icon" src="./images/check.png">
+                <li><div class="li-div" onclick="escolherVisibilidade(this)"><img src="./images/lock-open 1.png" alt=""><p>Público</p><img class="check-icon selecionado" src="./images/check.png">
+                <li><div class="li-div" onclick="escolherVisibilidade(this)"><img src="./images/lock-closed 1.png" alt=""><p>Reservadamente</p><img class="check-icon" src="./images/check.png">
             </ul>
             <button class="voltar" onclick="esconderSidebar()"><ion-icon name="return-down-back"></ion-icon></button>
         </div>
@@ -66,6 +70,7 @@
     <footer>
         <input id="caixa-texto" type="text" placeholder="Escreva aqui...">
         <div class="button-enviar" onclick="enviarMensagem()" ><ion-icon name="paper-plane-outline"></ion-icon></div>
+        <p class="rodape">Enviando para Todos (pública):</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
