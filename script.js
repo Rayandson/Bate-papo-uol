@@ -1,9 +1,10 @@
 let username = "";
 let nome;
 function verificaNome() {
+  username = document.querySelector(".username").value;
+  if(username !== "") {
   let aguarde = document.querySelector(".carregando");
   aguarde.classList.remove("escondido");
-  username = document.querySelector(".username").value;
   nome = { name: `${username}` };
   const requisicao = axios.post(
     "https://mock-api.driven.com.br/api/v6/uol/participants",
@@ -13,6 +14,7 @@ function verificaNome() {
     setTimeout(iniciaAplicacao, 500);
   });
   requisicao.catch(processaErro);
+}
 }
 function processaErro(erro) {
   if (erro.response.status !== 200) {
@@ -141,11 +143,6 @@ function selecionarDestino(div) {
   let rodape = document.querySelector(".rodape");
   destino = nome.innerHTML;
   rodape.innerHTML = `Enviando para ${destino} (${visibility})`;
-  // if (div.classList.contains("all")) {
-  //   rodape.innerHTML = `Enviando para Todos (${visibility})`;
-  // } else {
-  //   rodape.innerHTML = `Enviando para ${destino} (${visibility})`;
-  // }
 }
 
 let ultimoSelecionado = "";
