@@ -18,8 +18,7 @@
   z-index: 2;
 }
 .login img {
-  position: absolute;
-  top: 75px;
+ margin-bottom: 100px;
 }
 
 .inserirDados {
@@ -27,6 +26,7 @@
   flex-direction: column;
   gap: 15px;
   align-items: center;
+  margin-bottom: 150px;
 }
 
 .inserirDados input {
@@ -378,8 +378,7 @@ footer ion-icon {
     height: 200px;
   }
   .login img {
-    position: absolute;
-    top: 12vh;
+    margin-bottom: 100px;
   }
   .ul-1 {
     height: 250px;

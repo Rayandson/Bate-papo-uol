@@ -2,7 +2,7 @@ let username = "";
 let nome;
 function verificaNome() {
   username = document.querySelector(".username").value;
-  // if(username !== "") {
+  if(username !== "") {
   let aguarde = document.querySelector(".carregando");
   aguarde.classList.remove("escondido");
   nome = { name: `${username}` };
@@ -15,7 +15,7 @@ function verificaNome() {
   });
   requisicao.catch(processaErro);
 }
-// }
+}
 function processaErro(erro) {
   if (erro.response.status !== 200) {
     alert("O nome já existe! Escolha outro.");
